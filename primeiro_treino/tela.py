@@ -5,7 +5,7 @@ class TelaPython:
         sg.change_look_and_feel('DarkBrown4')
         # Layout (colocar aqui os botões e os parâmetros que vou utilizar)
         layout = [
-            [sg.Text('Nome', size=(5,0)), sg.Input(size=(15,0), key='nome')],#modificando o número do primeiro size, vai modificar o espaçamento da plavra nome até a caixinha e segundo size, vai mudar o tamanho da caixinha onde se escreve os parâmetros que recebem o imput
+            [sg.Text('Nome', size=(5,0)), sg.Input(size=(15,0),key='nome')],#modificando o número do primeiro size, vai modificar o espaçamento da plavra nome até a caixinha e segundo size, vai mudar o tamanho da caixinha onde se escreve os parâmetros que recebem o imput
             [sg.Text('Idade', size=(5,0)), sg.Input(size=(15,0),key='idade')],
             # abaixo temos os checkbox, radiobuttons, sliders
             [sg.Text('Quais provedores de e-mail são aceitos?')],
@@ -15,7 +15,7 @@ class TelaPython:
             [sg.Radio('Sim', 'cartoes', key='aceitaCartao' ),sg.Radio('Não', 'cartoes', key='naoAceitaCartao')],
             [sg.Slider(range=(0,100), default_value=0, orientation='h',size=(15, 20), key='sliderVelocidade')],
             [sg.Button('Enviar Dados')],
-            [sg.Output(size=(30,20))]
+            [sg.Output(size=(30,10))]
         ]
         # Janela(aqui colocar o que vai aparecer na janela do programa)
         self.janela = sg.Window("Dados do Usuário").layout(layout)
